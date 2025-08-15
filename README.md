@@ -1,41 +1,74 @@
-## 🧠 RAG Chatbot for PDFs (Free & Local)
+# 📚 Chat with your PDF using Free Hugging Face RAG
 
-This is a fully **free** Retrieval-Augmented Generation (RAG) chatbot that allows you to **chat with your own PDFs** using:
-
-- 💬 **LangChain**
-- 🧠 **Hugging Face Embeddings & LLM**
-- 🧾 **FAISS** (vector database)
-- 📚 **Streamlit UI**
+This Streamlit app lets you **chat with any PDF** using a **free Hugging Face Retrieval-Augmented Generation (RAG)** setup.  
+It uses **LangChain**, **FAISS**, and **sentence-transformers** for document embedding & retrieval, and **FLAN-T5** for free text generation.
 
 ---
 
 ## 🚀 Features
-
-- ✅ 100% Free (no OpenAI API needed)
-- ✅ Uses `sentence-transformers` for embeddings
-- ✅ Uses `flan-t5-base` Hugging Face model
-- ✅ Local FAISS vector store
-- ✅ Upload and chat with any PDF
-- ✅ Clean Streamlit UI
+- 📄 Upload and process **any PDF** (up to 200MB)
+- 🧠 Ask natural language questions and get answers from your PDF
+- 🔍 Uses **vector search (FAISS)** for efficient information retrieval
+- 💬 Runs **entirely for free** with Hugging Face models
 
 ---
 
-## 🧰 Tech Stack
+## 📷 Screenshots
 
-| Component | Tool |
-|----------|------|
-| UI | Streamlit |
-| Embeddings | `all-MiniLM-L6-v2` |
-| LLM | `flan-t5-base` |
-| Vector DB | FAISS |
-| PDF Loader | LangChain + PyPDF2 |
+### **Home Screen**
+![Home Screen](Screenshot%20(71).png)
+
+### **Example Interaction**
+![Example Chat](Screenshot2.png)  
+*(Replace `Screenshot2.png` with your actual second screenshot file name)*
 
 ---
 
-## 📦 Installation
+## 📂 Project Structure
+.
+├── app.py # Main Streamlit app
+├── utils.py # Utility functions for PDF loading, splitting, and vector store creation
+├── requirements.txt # Python dependencies
+├── uploaded_files/ # Stores uploaded PDFs
+└── README.md # Project documentation
 
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
 ```bash
-git https://github.com/6303-naidu/Langchain-Chatpdf.git
-cd rag-pdf-chatbot
+git clone https://github.com/6303-naidu/Langchain-Chatpdf.git
+cd Langchain-Chatpdf
+
+
+##Create a Virtual Environment (Optional but Recommended)
+python -m venv venv
+source venv/bin/activate    # On Mac/Linux
+venv\Scripts\activate       # On Windows
+
+
+####Install Dependencies
 pip install -r requirements.txt
+
+
+####Requirements
+
+Your requirements.txt:
+
+langchain
+sentence-transformers
+faiss-cpu
+PyPDF2
+streamlit
+transformers
+torch
+pypdf
+langchain-community
+
+
+###Running the App
+
+#Run the Streamlit app locally:
+
 streamlit run app.py
