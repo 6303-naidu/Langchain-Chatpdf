@@ -21,9 +21,6 @@ It uses **LangChain**, **FAISS**, and **sentence-transformers** for document emb
 ### **Example Interaction**
 ![Example Chat](Screenshot2.png)  
 *(Replace `Screenshot2.png` with your actual second screenshot file name)*
-
----
-
 ## 📂 Project Structure
 .
 ├── app.py # Main Streamlit app
@@ -32,14 +29,50 @@ It uses **LangChain**, **FAISS**, and **sentence-transformers** for document emb
 ├── uploaded_files/ # Stores uploaded PDFs
 └── README.md # Project documentation
 
+
+## 🛠 How It Works
+
+PDF Upload → You upload a PDF file.
+
+Text Extraction → The app extracts text using PyPDFLoader.
+
+Text Splitting → Large chunks are split into smaller pieces using RecursiveCharacterTextSplitter.
+
+Embedding → Each chunk is embedded using sentence-transformers/all-MiniLM-L6-v2.
+
+Vector Storage → FAISS stores embeddings for fast similarity search.
+
+Question Answering → A query retrieves relevant chunks and sends them to FLAN-T5 to generate answers.
+
+## 📌 Notes
+
+The app uses google/flan-t5-base from Hugging Face — this is free to use.
+
+Ensure you have pypdf installed (it is required for PDF parsing).
+
+Large PDFs (close to 200MB) may take longer to process.
+
+## 📜 License
+
+This project is licensed under the MIT License — feel free to use and modify it.
+
+## 💡 Future Improvements
+
+Add chat history for better context retention.
+
+Support for multiple PDF uploads.
+
+Deploy on Streamlit Cloud or Hugging Face Spaces.
+
 ---
 
-## ⚙️ Installation & Setup
 
+---
+## ⚙️ Installation & Setup
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/6303-naidu/Langchain-Chatpdf.git
-cd Langchain-Chatpdf
+git clone https://github.com/yourusername/pdf-chat-rag.git
+cd Langchain-Chatpd
 
 
 ##Create a Virtual Environment (Optional but Recommended)
@@ -48,11 +81,11 @@ source venv/bin/activate    # On Mac/Linux
 venv\Scripts\activate       # On Windows
 
 
-####Install Dependencies
+## nstall Dependencies
 pip install -r requirements.txt
 
 
-####Requirements
+## Requirements
 
 Your requirements.txt:
 
