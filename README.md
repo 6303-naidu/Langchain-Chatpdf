@@ -21,7 +21,7 @@ It uses **LangChain**, **FAISS**, and **sentence-transformers** for document emb
 
 ### **Out put**
 ![Home Screen](Langchain_chat_output.png)
-*(Replace `Screenshot2.png` with your actual second screenshot file name)*
+
 ##  Project Structure
 .
 ├── app.py # Main Streamlit app
