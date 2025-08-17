@@ -15,11 +15,12 @@ It uses **LangChain**, **FAISS**, and **sentence-transformers** for document emb
 
 ## Screenshots
 
-### **Home Screen**
-![Home Screen](Langchain_chat_output.png)
-
 ### **Example Interaction**
-![Example Chat](Screenshot2.png)  
+![Example Chat](Langchain_input.png)  
+
+
+### **Out put**
+![Home Screen](Langchain_chat_output.png)
 *(Replace `Screenshot2.png` with your actual second screenshot file name)*
 ##  Project Structure
 .
