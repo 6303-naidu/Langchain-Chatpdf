@@ -72,7 +72,7 @@ Deploy on Streamlit Cloud or Hugging Face Spaces.
 ##  Installation & Setup
 ###  Clone the Repository
 ```bash
-git clone https://github.com/yourusername/pdf-chat-rag.git
+git clone https://github.com/6303-naidu/Langchain-Chatpdf.git
 cd Langchain-Chatpd
 
 
