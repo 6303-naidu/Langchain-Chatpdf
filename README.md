@@ -16,7 +16,7 @@ It uses **LangChain**, **FAISS**, and **sentence-transformers** for document emb
 ## Screenshots
 
 ### **Home Screen**
-![Home Screen](Screenshot%20(71).png)
+![Home Screen](Langchain_chat_output.png)
 
 ### **Example Interaction**
 ![Example Chat](Screenshot2.png)  
